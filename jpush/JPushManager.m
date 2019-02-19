@@ -101,21 +101,21 @@
 }
 -(void)didFinishLaunchingWithOptions:(NSNotification*)notify
 {
-    NSDictionary *d= notify.userInfo;
-    NSDictionary *options=d[@"options"];
-    
-    NSString *appkey=options[@"jpushAppkey"];
-    [JPUSHService setupWithOption:options appKey:appkey
-                          channel:@"appstore"
-                 apsForProduction:true
-            advertisingIdentifier:nil];
-    
-    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
-        NSLog([@"registrationID="add: registrationID]);
-    }];
+//    NSDictionary *d= notify.userInfo;
+//    NSDictionary *options=d[@"options"];
+//    
+//    NSString *appkey=options[@"jpushAppkey"];
+//    [JPUSHService setupWithOption:options appKey:appkey
+//                          channel:@"appstore"
+//                 apsForProduction:true
+//            advertisingIdentifier:nil];
+//    
+//    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+//    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+//    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+//    [JPUSHService registrationIDCompletionHandler:^(int resCode, NSString *registrationID) {
+//        NSLog([@"registrationID="add: registrationID]);
+//    }];
     
 }
 -(void)didRegisterForRemoteNotificationsWithDeviceToken:(NSNotification*)notify

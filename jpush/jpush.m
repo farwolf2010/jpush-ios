@@ -12,6 +12,10 @@
 #import <WeexSDK/WXSDKEngine.h>
 #import "WXJPushModule.h"
 #import "JPushManager.h"
+#import "farwolf_weex.h"
+
+
+WX_PLUGIN_Entry(jpush)
 @implementation jpush
 
 
@@ -25,14 +29,8 @@
     return instance;
 }
 
--(void)initPush
+-(void)initEntry:(NSMutableDictionary*)lanchOption
 {
-    //Required
-    //notice: 3.0.0及以后版本注册可以这样写，也可以继续用之前的注册方式
-//    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
-//    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
-//    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
-//     [WXSDKEngine registerModule:@"jpush" withClass:[WXJPushModule class]];
     [[JPushManager sharedManager] initHanler];
 }
 

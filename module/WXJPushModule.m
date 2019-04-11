@@ -15,7 +15,7 @@ WX_PlUGIN_EXPORT_MODULE(jpush, WXJPushModule)
 @synthesize weexInstance;
 
 WX_EXPORT_METHOD_SYNC(@selector(getJPushId))
-WX_EXPORT_METHOD_SYNC(@selector(regist:callback))
+WX_EXPORT_METHOD_SYNC(@selector(regist:callback:))
  
 -(NSString*)getJPushId
 {
